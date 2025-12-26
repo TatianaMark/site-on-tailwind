@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+    --logo-color: #415BE7;
+    --header-round-color: #DBDDE3;
+    --prise-text-color: #525252;
+    --bg-main-section: #F9F9FB;
+    --counte-text-color: #737373;
+    --button-hover: #2F45B9;
+
+}
+
+@layer utilities {
+    .gray-custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #737373 transparent;
+    }
+
+    .gray-custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .gray-custom-scrollbar::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: #737373;
+    }
+    .gray-custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
