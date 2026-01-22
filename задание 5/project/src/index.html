@@ -1,18 +1,21 @@
 <!doctype html>
+<html lang="ru">
 <html>
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tailwind</title>
 </head>
-<body>
+<body class="h-screen w-full">
 
-<div class="">
-    <header class="flex py-5 px-20 justify-between ">
+<div class="h-full w-full">
+
+    <header class="flex py-5 justify-between max-w-screen-xl mx-auto md:px-5 2xl:flex-row [@media(max-width:376px)]:flex-col [@media(max-width:376px)]:w-full [@media(max-width:376px)]:px-4">
         <div class="text-(--logo-color) text-4xl font-bold">
             <a href="#">FURNITURE</a>
         </div>
         <div class="flex flex-row">
-            <div class="flex flex-row items-center">
+            <div class="flex flex-row items-center hover:cursor-pointer">
                 <div class="grid place-items-center rounded-full w-8 h-8 bg-(--logo-color)/[6%] border-1 border-(--header-round-color) hover:bg-(--logo-color) hover:border-(--logo-color) group relative">
                     <span class="hidden group-hover:inline text-white">1</span>
                     <svg class="group-hover:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,14 +23,14 @@
                               stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
+                <div class="mx-2 text-base">Cart</div>
                 <div class="mx-2">
-                    <svg width="48" height="1" viewBox="0 0 48 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="[@media(max-width:376px)]:w-[18px]" width="48" height="1" viewBox="0 0 48 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="0.5" x2="48" y2="0.5" stroke="#DBDDE3"/>
                     </svg>
                 </div>
-                <div class="mx-2 text-base">Cart</div>
             </div>
-            <div class="flex flex-row items-center">
+            <div class="flex flex-row items-center hover:cursor-pointer">
                 <div class="grid place-items-center rounded-full w-8 h-8 bg-(--logo-color)/[6%] border-1 border-(--header-round-color) hover:bg-(--logo-color) hover:border-(--logo-color) group relative">
                     <span class="hidden group-hover:inline text-white">2</span>
                     <svg class="group-hover:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,66 +38,69 @@
                               stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
+                <div class="mx-2 text-base">Review</div>
                 <div class="mx-2">
-                    <svg width="48" height="1" viewBox="0 0 48 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="[@media(max-width:376px)]:w-[18px]" width="48" height="1" viewBox="0 0 48 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="0.5" x2="48" y2="0.5" stroke="#DBDDE3"/>
                     </svg>
                 </div>
-                <div class="mx-2 text-base">Review</div>
             </div>
-            <div class="flex flex-row items-center">
+            <div class="flex flex-row items-center hover:cursor-pointer">
                 <div class="grid place-items-center rounded-full w-8 h-8 bg-(--logo-color) text-white">3</div>
                 <div class="mx-2">Checkout</div>
             </div>
         </div>
     </header>
 
-    <main>
-        <div class="flex pl-10 pr-20 pt-12 pb-16 gap-20 bg-(--bg-main-section)">
+
+    <main class="h-auto bg-(--bg-main-section) [@media(max-width:376px)]:w-full">
+        <div class="h-auto flex lg:justify-center md:justify-start ">
+        <div class="flex lg:flex-row h-full pl-10 pr-20 pt-12 pb-16 lg:gap-20 md:flex-col md:gap-0 md:pl-5 md:pt-10 md:pr-0 [@media(max-width:376px)]:flex-col [@media(max-width:376px)]:w-full [@media(max-width:376px)]:px-5 [@media(max-width:376px)]:pt-10">
+
             <div class="flex flex-col">
                 <h2 class="text-3xl font-bold">Checkout</h2>
                 <h3 class="mt-[28px] text-xl font-bold">Shipping Information</h3>
                 <form class="flex flex-col mt-[28px]" action="">
                     <label class="flex flex-col">
                         <div class="text-base font-bold after:text-red-500 after:content-['*']">Full name </div>
-                        <input class="w-2xl h-[51px] mt-2 border border-(--header-round-color) rounded-sm p-4"
+                        <input class="w-full h-[51px] mt-2 border border-(--header-round-color) rounded-sm p-4 [@media(max-width:376px)]:"
                                type="text" placeholder="Enter full name"/>
                     </label>
                     <label class="flex flex-col pt-6">
                         <div class="text-base font-bold after:text-red-500 after:content-['*']">Email address </div>
-                        <input class="w-2xl h-[51px] mt-2 border border-(--header-round-color) rounded-sm p-4"
+                        <input class="w-full h-[51px] mt-2 border border-(--header-round-color) rounded-sm p-4"
                                type="text" placeholder="Enter email address"/>
                     </label>
                     <label class="flex flex-col pt-6">
                         <div class="text-base font-bold after:text-red-500 after:content-['*']">Phone number </div>
-                        <input class="w-2xl h-[51px] mt-2 border border-(--header-round-color) rounded-sm p-4"
+                        <input class="w-full h-[51px] mt-2 border border-(--header-round-color) rounded-sm p-4"
                                type="text" placeholder="Enter phone number"/>
                     </label>
                     <label class="flex flex-col pt-6">
                         <div class="text-base font-bold after:text-red-500 after:content-['*']">Country </div>
-                        <input class="w-2xl h-[51px] mt-2 border border-(--header-round-color) rounded-sm p-4"
+                        <input class="w-full h-[51px] mt-2 border border-(--header-round-color) rounded-sm p-4"
                                type="text" placeholder="Enter your country"/>
                     </label>
-                    <div class="flex flex-row items-center pt-6">
+                    <div class="flex flex-row items-center pt-6 [@media(max-width:376px)]:flex-col [@media(max-width:376px)]:items-start">
                         <label class="flex flex-col mt-2">
                             <div class="text-base font-bold">City</div>
-                            <input class="w-[210px] border border-(--header-round-color) rounded-sm p-4" type="text"
+                            <input class="w-[210px] border border-(--header-round-color) rounded-sm p-4 [@media(max-width:376px)]:w-[335px]" type="text"
                                    placeholder="Enter city"/>
                         </label>
                         <label class="flex flex-col mt-2">
-                            <div class="text-base font-bold">State</div>
-                            <input class="w-[210px] border border-(--header-round-color) rounded-sm p-4 ml-5 mr-5"
+                            <div class="text-base font-bold md:ml-5">State</div>
+                            <input class="w-[210px] border border-(--header-round-color) rounded-sm p-4 ml-5 mr-5 [@media(max-width:376px)]:m-0 [@media(max-width:376px)]:w-[335px]"
                                    type="text" placeholder="Enter state"/>
                         </label>
                         <label class="flex flex-col mt-2">
                             <div class="text-base font-bold">ZIP Code</div>
-                            <input class="w-[210px] border border-(--header-round-color) rounded-sm p-4" type="text"
+                            <input class="w-[210px] border border-(--header-round-color) rounded-sm p-4 [@media(max-width:376px)]:w-[335px]" type="text"
                                    placeholder="Enter ZIP code"/>
                         </label>
                     </div>
                 </form>
             </div>
-            <div class="pt-[108px] flex-1">
+            <div class="pt-[108px] md:pt-10 [@media(max-width:376px)]:pt-10">
                 <div>
                     <h3 class="text-xl font-bold">Review your cart</h3>
                     <div class="flex flex-row items-center gap-4 pt-6">
@@ -119,7 +125,7 @@
                     </div>
                 </div>
 
-                <div class="pt-10 pb-10 w-[528px]">
+                <div class="pt-10 pb-10 w-[528px] [@media(max-width:376px)]:w-full">
                     <p class="flex flex-row justify-between">
                         <span class="text-(--prise-text-color)">Subtotal</span>
                         <span class="font-bold">$45.00</span>
@@ -137,14 +143,16 @@
                         <span class="font-bold">$40.00</span>
                     </p>
                 </div>
-                <button class="w-[528px] h-[52px] text-center bg-(--logo-color) text-base text-white rounded-lg hover:bg-(--button-hover)">Pay Now</button>
+                <button class="w-[528px] h-[52px] text-center bg-(--logo-color) text-base text-white rounded-lg hover:bg-(--button-hover) [@media(max-width:376px)]:w-full">Pay Now</button>
 
             </div>
+
+        </div>
         </div>
     </main>
 
 
-    <footer class="">
+    <footer class="h-auto">
         <div class="py-9 text-center text-(--counte-text-color)">
             ©2025 Furniture, Inc. All Rights Reserved
         </div>
